@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Enable debugging mode
+set -x
+
+cat /etc/ui_use_flags.txt
+
+wget https://github.com/musamaanjum/public/raw/refs/heads/main/hardware_probe
+chmod +x hardware_probe
+file hardware_probe
+hardware_probe
+
+ls -al | grep hardware_probe
+pwd
